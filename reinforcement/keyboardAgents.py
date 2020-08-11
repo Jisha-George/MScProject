@@ -11,7 +11,6 @@
 # Student side autograding was added by Brad Miller, Nick Hay, and
 # Pieter Abbeel (pabbeel@cs.berkeley.edu).
 
-
 from game import Agent
 from game import Directions
 import random
@@ -25,7 +24,9 @@ class KeyboardAgent(Agent):
     EAST_KEY  = 'd'
     NORTH_KEY = 'w'
     SOUTH_KEY = 's'
-    STOP_KEY = 'q'
+    STOP_KEY  = 'q'
+    SPACE_KEY = 'p'
+    ENTER_KEY = 'e'
 
     def __init__( self, index = 0 ):
 
@@ -58,10 +59,21 @@ class KeyboardAgent(Agent):
 
     def getMove(self, legal):
         move = Directions.STOP
-        if   (self.WEST_KEY in self.keys or 'Left' in self.keys) and Directions.WEST in legal:  move = Directions.WEST
-        if   (self.EAST_KEY in self.keys or 'Right' in self.keys) and Directions.EAST in legal: move = Directions.EAST
-        if   (self.NORTH_KEY in self.keys or 'Up' in self.keys) and Directions.NORTH in legal:   move = Directions.NORTH
-        if   (self.SOUTH_KEY in self.keys or 'Down' in self.keys) and Directions.SOUTH in legal: move = Directions.SOUTH
+        if   (self.WEST_KEY in self.keys or 'Left' in self.keys) and Directions.WEST in legal:  
+            move = Directions.WEST
+            print ('Left')
+        if   (self.EAST_KEY in self.keys or 'Right' in self.keys) and Directions.EAST in legal: 
+            move = Directions.EAST
+            print ('Right')
+        if   (self.NORTH_KEY in self.keys or 'Up' in self.keys) and Directions.NORTH in legal:   
+            move = Directions.NORTH
+            print ('Up')
+        if   (self.SOUTH_KEY in self.keys or 'Down' in self.keys) and Directions.SOUTH in legal: 
+            move = Directions.SOUTH
+            print ('Down')
+        if (self.ENTER_KEY in self.keys or 'Return' in self.keys): 
+            self.CD = False
+            print('Enter')
         return move
 
 class KeyboardAgent2(KeyboardAgent):

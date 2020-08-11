@@ -24,6 +24,9 @@ from util import *
 import time, os
 import traceback
 import sys
+from graphicsUtils import keys_waiting
+from graphicsUtils import keys_press
+from graphicsUtils import keys_pressed
 
 #######################
 # Parts worth reading #
@@ -514,6 +517,8 @@ class Game:
     """
     The Game manages the control flow, soliciting actions from agents.
     """
+    SPACE_KEY = 'p'
+    ENTER_KEY = 'e'
 
     def __init__( self, agents, display, rules, startingIndex=0, muteAgents=False, catchExceptions=False ):
         self.agentCrashed = False
@@ -530,6 +535,8 @@ class Game:
         self.agentTimeout = False
         import cStringIO
         self.agentOutput = [cStringIO.StringIO() for agent in agents]
+        self.keys = []
+        self.keypress = []
 
     def getProgress(self):
         if self.gameOver:
@@ -612,6 +619,18 @@ class Game:
         numAgents = len( self.agents )
 
         while not self.gameOver:
+
+#            keypress = keys_press()
+ #          
+  #          if keypress != []:
+   #            self.keypress = keypress
+#
+ #           if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):
+  #             print('SPACE PRESS!')
+   #            
+    #           if (self.ENTER_KEY in self.keypress or 'Return' in self.keypress):
+     #              print('enter')
+
             # Fetch the next agent
             agent = self.agents[agentIndex]
             move_time = 0
