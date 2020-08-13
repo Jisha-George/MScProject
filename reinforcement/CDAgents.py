@@ -14,7 +14,7 @@
 
 from game import *
 from learningAgents import ReinforcementAgent
-from featureExtractors import *
+from featureExtractors import * 
 from game import Agent
 from game import Directions
 from graphicsUtils import keys_waiting
@@ -22,6 +22,7 @@ from graphicsUtils import keys_pressed
 from graphicsUtils import keys_press
 
 import random,util,math,time
+
 
 class CDAgent(ReinforcementAgent):
     """
@@ -48,7 +49,7 @@ class CDAgent(ReinforcementAgent):
     EAST_KEY  = 'd'
     NORTH_KEY = 'w'
     SOUTH_KEY = 's'
-    STOP_KEY = 'q'
+    STOP_KEY  = 'q'
     SPACE_KEY = 'p'
     ENTER_KEY = 'e'
     
@@ -59,9 +60,8 @@ class CDAgent(ReinforcementAgent):
         self.QValues = util.Counter() #indexed by state and action
         self.lastMove = Directions.STOP
         self.index = index
-        self.keys = []
         self.keypress = []
-        self.CD = False
+        Directions.CD = False
 
     def getQValue(self, state, action):
         """
@@ -109,29 +109,26 @@ class CDAgent(ReinforcementAgent):
           HINT: You might want to use util.flipCoin(prob)
           HINT: To pick randomly from a list, use random.choice(list)
         """
-        
-        keypress = keys_press()# + keys_waiting()
-        keys = keys_pressed()
+
+        keypress = keys_pressed() + keys_waiting()
 
         if keypress != []:
             self.keypress = keypress
-        if keys != []:
-            self.keys = keys
 
         if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):          
-            self.CD = True
+            Directions.CD = True
             
-        if self.CD == True:
+        if Directions.CD == True:
             action = self.CDStart(state)  
-            print('-' + action)
-        elif self.CD == False:
+          #  print('-' + action)
+        elif Directions.CD == False:
             # Pick Action
             action = self.QStart(state)
                 
         return action
         
     def QStart(self,state):
-      	print('QS')
+      	
         legalActions = self.getLegalActions(state)
         action = None
          
@@ -139,10 +136,15 @@ class CDAgent(ReinforcementAgent):
             action = random.choice(legalActions)
         else:
             action = self.getPolicy(state)
+        pacpos = state.getPacmanPosition()
+     #   print(pacpos)
+     #   print('QS')
+     #   print(action)
+        print(legalActions)
         return action
     
     def CDStart(self,state):
-    	print('CDS')
+    #	print('CDS')
         legal = state.getLegalActions(self.index)
         move = self.getMove(legal)
 
@@ -150,37 +152,38 @@ class CDAgent(ReinforcementAgent):
             # Try to move in the same direction as before
             if self.lastMove in legal:
                 move = self.lastMove
-
-        if (self.STOP_KEY in self.keys) and Directions.STOP in legal: move = Directions.STOP
+        if (self.STOP_KEY in self.keypress) and Directions.STOP in legal: move = Directions.STOP
 
         if move not in legal: move = Directions.STOP
 
         self.lastMove = move
+        pacpos = state.getPacmanPosition()
+        #print(pacpos)
         return move
     
     def getMove(self, legal):
         move = Directions.STOP
         if   (self.WEST_KEY in self.keypress or 'Left' in self.keypress) and Directions.WEST in legal:  
             move = Directions.WEST
-            print('1' + move)
-            print ('Left')
+         #   print('1' + move)
+          #  print ('Left')
         if   (self.EAST_KEY in self.keypress or 'Right' in self.keypress) and Directions.EAST in legal: 
             move = Directions.EAST
-            print('2' + move)
-            print ('Right')
+           # print('2' + move)
+            #print ('Right')
         if   (self.NORTH_KEY in self.keypress or 'Up' in self.keypress) and Directions.NORTH in legal:   
             move = Directions.NORTH
-            print('3' + move)
-            print ('Up')
+   #         print('3' + move)
+    #        print ('Up')
         if   (self.SOUTH_KEY in self.keypress or 'Down' in self.keypress) and Directions.SOUTH in legal: 
             move = Directions.SOUTH
-            print('4' + move)
-            print ('Down')
-        if (self.ENTER_KEY in self.keys or 'Return' in self.keys): 
-            self.CD = False
+     #       print('4' + move)
+      #      print ('Down')
+        if (self.ENTER_KEY in self.keypress or 'Return' in self.keypress): 
+            Directions.CD = False
             move = Directions.STOP
-            print('5' + move)
-            print('Enter')
+       #     print('5' + move)
+        #    print('Enter')
         return move
    
     def update(self, state, action, nextState, reward):
@@ -194,14 +197,18 @@ class CDAgent(ReinforcementAgent):
         """
         newQValue = (1 - self.alpha) * self.getQValue(state, action) #new Qvalue
         newQValue += self.alpha * (reward + (self.discount * self.getValue(nextState)))
-        self.QValues[state, action] = newQValue
+        self.QValues[state, action] = newQValue  
+        print(self.episodesSoFar)
+        print(state)
+        print(nextState)
+        print('1 ' + action)
+#        print(newQValue)
 
     def getPolicy(self, state):
         return self.computeActionFromQValues(state)
 
     def getValue(self, state):
         return self.computeValueFromQValues(state)
-
 
 class PacmanCDAgent(CDAgent):
     "Exactly the same as QLearningAgent, but with different default parameters"
@@ -232,10 +239,11 @@ class PacmanCDAgent(CDAgent):
         """
         action = CDAgent.getAction(self,state)
         self.doAction(state,action)
+#        time.sleep(1)
         return action
 
 
-class ApproximateQAgent(PacmanCDAgent):
+class ApproximateQCDAgent(PacmanCDAgent):
     """
        ApproximateQLearningAgent
 
@@ -249,6 +257,7 @@ class ApproximateQAgent(PacmanCDAgent):
         self.weights = util.Counter()
 
     def getWeights(self):
+        print(self.weights)
         return self.weights
 
     def getQValue(self, state, action):
@@ -262,7 +271,7 @@ class ApproximateQAgent(PacmanCDAgent):
 
         for feature in features:
             QValue += self.weights[feature] * features[feature]
-
+            print(QValue) 
         return QValue
 
     def update(self, state, action, nextState, reward):
@@ -275,14 +284,16 @@ class ApproximateQAgent(PacmanCDAgent):
 
         for feature in features:
           self.weights[feature] += self.alpha * features[feature] * difference
+          
 
     def final(self, state):
         "Called at the end of each game."
         # call the super-class final method
         PacmanCDAgent.final(self, state)
-    
+
         # did we finish training?
         if self.episodesSoFar == self.numTraining:
             # you might want to print your weights here for debugging
             "*** YOUR CODE HERE ***"
+            
             pass

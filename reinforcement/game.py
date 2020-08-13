@@ -24,9 +24,6 @@ from util import *
 import time, os
 import traceback
 import sys
-from graphicsUtils import keys_waiting
-from graphicsUtils import keys_press
-from graphicsUtils import keys_pressed
 
 #######################
 # Parts worth reading #
@@ -69,6 +66,8 @@ class Directions:
                EAST: WEST,
                WEST: EAST,
                STOP: STOP}
+               
+    CD = False
 
 class Configuration:
     """

@@ -224,6 +224,7 @@ class ReinforcementAgent(ValueEstimationAgent):
         """
         deltaReward = state.getScore() - self.lastState.getScore()
         self.observeTransition(self.lastState, self.lastAction, state, deltaReward)
+        Directions.CD = False
         self.stopEpisode()
 
         # Make sure we have this var
@@ -256,3 +257,4 @@ class ReinforcementAgent(ValueEstimationAgent):
         if self.episodesSoFar == self.numTraining:
             msg = 'Training Done (turning off epsilon and alpha)'
             print '%s\n%s' % (msg,'-' * len(msg))
+            

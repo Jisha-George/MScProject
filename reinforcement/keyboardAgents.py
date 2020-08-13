@@ -38,6 +38,9 @@ class KeyboardAgent(Agent):
         from graphicsUtils import keys_waiting
         from graphicsUtils import keys_pressed
         keys = keys_waiting() + keys_pressed()
+        
+        print(keys)
+        
         if keys != []:
             self.keys = keys
 

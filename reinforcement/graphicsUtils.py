@@ -249,7 +249,7 @@ _keysdown = {}
 _keyswaiting = {}
 # This holds an unprocessed key release.  We delay key releases by up to
 # one call to keys_pressed() to get round a problem with auto repeat.
-_got_release = 1
+_got_release = None
 
 def _keypress(event):
     global _got_release
@@ -266,7 +266,7 @@ def _keyrelease(event):
         del _keysdown[event.keysym]
     except:
         pass
-    _got_release = 1
+    _got_release = None
 
 def remap_arrows(event):
     # TURN ARROW PRESSES INTO LETTERS (SHOULD BE IN KEYBOARD AGENT)
@@ -288,9 +288,9 @@ def remap_arrows(event):
 
 def _clear_keys(event=None):
     global _keysdown, _got_release, _keyswaiting
-    _keysdown = {}
+    _keysdown = {} 
     _keyswaiting = {}
-    _got_release = None
+    _got_release = 1
 
 def keys_pressed(d_o_e=Tkinter.tkinter.dooneevent,
                  d_w=Tkinter.tkinter.DONT_WAIT):
@@ -299,16 +299,7 @@ def keys_pressed(d_o_e=Tkinter.tkinter.dooneevent,
         d_o_e(d_w)
         
     return _keysdown.keys()
-    
-def keys_press(d_o_e=Tkinter.tkinter.dooneevent,
-                 d_w=Tkinter.tkinter.DONT_WAIT):
-    d_o_e(d_w)
-    if _got_release:
-        d_o_e(d_w)
-        print(d_o_e(d_w))
-                
-    return _keysdown.keys()
-
+ 
 def keys_waiting():
     global _keyswaiting
     keys = _keyswaiting.keys()
