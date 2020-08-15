@@ -19,7 +19,6 @@ from game import Agent
 from game import Directions
 from graphicsUtils import keys_waiting
 from graphicsUtils import keys_pressed
-from graphicsUtils import keys_press
 
 import random,util,math,time
 
@@ -115,12 +114,15 @@ class CDAgent(ReinforcementAgent):
         if keypress != []:
             self.keypress = keypress
 
-        if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):          
-            Directions.CD = True
+        if self.episodesSoFar < self.numTraining:
+            if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):          
+                Directions.CD = True
+        else:
+        	print("Corrective Demontration Locked!")
+        	
             
         if Directions.CD == True:
             action = self.CDStart(state)  
-          #  print('-' + action)
         elif Directions.CD == False:
             # Pick Action
             action = self.QStart(state)
@@ -137,14 +139,11 @@ class CDAgent(ReinforcementAgent):
         else:
             action = self.getPolicy(state)
         pacpos = state.getPacmanPosition()
-     #   print(pacpos)
-     #   print('QS')
-     #   print(action)
         print(legalActions)
         return action
     
     def CDStart(self,state):
-    #	print('CDS')
+
         legal = state.getLegalActions(self.index)
         move = self.getMove(legal)
 
@@ -158,32 +157,22 @@ class CDAgent(ReinforcementAgent):
 
         self.lastMove = move
         pacpos = state.getPacmanPosition()
-        #print(pacpos)
+
         return move
     
     def getMove(self, legal):
         move = Directions.STOP
         if   (self.WEST_KEY in self.keypress or 'Left' in self.keypress) and Directions.WEST in legal:  
             move = Directions.WEST
-         #   print('1' + move)
-          #  print ('Left')
         if   (self.EAST_KEY in self.keypress or 'Right' in self.keypress) and Directions.EAST in legal: 
             move = Directions.EAST
-           # print('2' + move)
-            #print ('Right')
         if   (self.NORTH_KEY in self.keypress or 'Up' in self.keypress) and Directions.NORTH in legal:   
             move = Directions.NORTH
-   #         print('3' + move)
-    #        print ('Up')
         if   (self.SOUTH_KEY in self.keypress or 'Down' in self.keypress) and Directions.SOUTH in legal: 
             move = Directions.SOUTH
-     #       print('4' + move)
-      #      print ('Down')
         if (self.ENTER_KEY in self.keypress or 'Return' in self.keypress): 
             Directions.CD = False
             move = Directions.STOP
-       #     print('5' + move)
-        #    print('Enter')
         return move
    
     def update(self, state, action, nextState, reward):
@@ -201,8 +190,7 @@ class CDAgent(ReinforcementAgent):
         print(self.episodesSoFar)
         print(state)
         print(nextState)
-        print('1 ' + action)
-#        print(newQValue)
+        print(action)
 
     def getPolicy(self, state):
         return self.computeActionFromQValues(state)
@@ -239,61 +227,5 @@ class PacmanCDAgent(CDAgent):
         """
         action = CDAgent.getAction(self,state)
         self.doAction(state,action)
-#        time.sleep(1)
+        #time.sleep(0.15)
         return action
-
-
-class ApproximateQCDAgent(PacmanCDAgent):
-    """
-       ApproximateQLearningAgent
-
-       You should only have to overwrite getQValue
-       and update.  All other QLearningAgent functions
-       should work as is.
-    """
-    def __init__(self, extractor='IdentityExtractor', **args):
-        self.featExtractor = util.lookup(extractor, globals())()
-        PacmanCDAgent.__init__(self, **args)
-        self.weights = util.Counter()
-
-    def getWeights(self):
-        print(self.weights)
-        return self.weights
-
-    def getQValue(self, state, action):
-        """
-          Should return Q(state,action) = w * featureVector
-          where * is the dotProduct operator
-        """
-
-        features = self.featExtractor.getFeatures(state,action)
-        QValue = 0.0
-
-        for feature in features:
-            QValue += self.weights[feature] * features[feature]
-            print(QValue) 
-        return QValue
-
-    def update(self, state, action, nextState, reward):
-        """
-           Should update your weights based on transition
-        """
-        QValue = 0
-        difference = reward + (self.discount * self.getValue(nextState) - self.getQValue(state, action))
-        features = self.featExtractor.getFeatures(state, action)
-
-        for feature in features:
-          self.weights[feature] += self.alpha * features[feature] * difference
-          
-
-    def final(self, state):
-        "Called at the end of each game."
-        # call the super-class final method
-        PacmanCDAgent.final(self, state)
-
-        # did we finish training?
-        if self.episodesSoFar == self.numTraining:
-            # you might want to print your weights here for debugging
-            "*** YOUR CODE HERE ***"
-            
-            pass
