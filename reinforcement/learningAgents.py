@@ -228,6 +228,8 @@ class ReinforcementAgent(ValueEstimationAgent):
         self.observeTransition(self.lastState, self.lastAction, state, deltaReward)
         #if Directions.CD == True:
         Directions.CD = False
+        print(self.episodesSoFar)
+        print(self.numTraining)
         self.stopEpisode()
 
         # Make sure we have this var
