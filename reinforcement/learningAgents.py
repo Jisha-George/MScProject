@@ -45,6 +45,7 @@ class ValueEstimationAgent(Agent):
         self.epsilon = float(epsilon)
         self.discount = float(gamma)
         self.numTraining = int(numTraining)
+        print(self.EpisodesSoFar)
 
     ####################################
     #    Override These Functions      #
@@ -225,8 +226,8 @@ class ReinforcementAgent(ValueEstimationAgent):
         """
         deltaReward = state.getScore() - self.lastState.getScore()
         self.observeTransition(self.lastState, self.lastAction, state, deltaReward)
-        if Directions.CD == True:
-            Directions.CD = False
+        #if Directions.CD == True:
+        Directions.CD = False
         self.stopEpisode()
 
         # Make sure we have this var

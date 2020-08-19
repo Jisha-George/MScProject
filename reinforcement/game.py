@@ -534,8 +534,6 @@ class Game:
         self.agentTimeout = False
         import cStringIO
         self.agentOutput = [cStringIO.StringIO() for agent in agents]
-        self.keys = []
-        self.keypress = []
 
     def getProgress(self):
         if self.gameOver:
@@ -618,9 +616,6 @@ class Game:
         numAgents = len( self.agents )
 
         while not self.gameOver:
-        
-            
-            
             
             # Fetch the next agent
             agent = self.agents[agentIndex]
@@ -683,10 +678,11 @@ class Game:
                     #print "Agent: %d, time: %f, total: %f" % (agentIndex, move_time, self.totalAgentTimes[agentIndex])
                     if self.totalAgentTimes[agentIndex] > self.rules.getMaxTotalTime(agentIndex):
                         print >>sys.stderr, "Agent %d ran out of time! (time: %1.2f)" % (agentIndex, self.totalAgentTimes[agentIndex])
+                        print("Pacman had a Score of %d." % self.state.data.score)
                         self.agentTimeout = True
                         self._agentCrash(agentIndex, quiet=True)
                         self.unmute()
-                        return
+                       # return
                     self.unmute()
                 except Exception,data:
                     self._agentCrash(agentIndex)

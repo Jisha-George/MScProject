@@ -15,10 +15,8 @@
 from game import *
 from learningAgents import ReinforcementAgent
 from featureExtractors import * 
-from game import Agent
-from game import Directions
-from graphicsUtils import keys_waiting
-from graphicsUtils import keys_pressed
+from game import Agent, Directions
+from graphicsUtils import keys_waiting, keys_pressed
 
 import random,util,math,time
 
@@ -114,7 +112,7 @@ class CDAgent(ReinforcementAgent):
         if keypress != []:
             self.keypress = keypress
 
-        if self.episodesSoFar < self.numTraining:
+        if Agent.episodeSoFar < self.numTraining:
             if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):          
                 Directions.CD = True
         else:
@@ -187,7 +185,7 @@ class CDAgent(ReinforcementAgent):
         newQValue = (1 - self.alpha) * self.getQValue(state, action) #new Qvalue
         newQValue += self.alpha * (reward + (self.discount * self.getValue(nextState)))
         self.QValues[state, action] = newQValue  
-        print(self.episodesSoFar)
+        print(Agent.episodeSoFar)
         print(state)
         print(nextState)
         print(action)
@@ -229,3 +227,57 @@ class PacmanCDAgent(CDAgent):
         self.doAction(state,action)
         #time.sleep(0.15)
         return action
+
+
+class ApproximateQAgent(PacmanCDAgent):
+    """
+       ApproximateQLearningAgent
+
+       You should only have to overwrite getQValue
+       and update.  All other QLearningAgent functions
+       should work as is.
+    """
+    def __init__(self, extractor='IdentityExtractor', **args):
+        self.featExtractor = util.lookup(extractor, globals())()
+        PacmanQAgent.__init__(self, **args)
+        self.weights = util.Counter()
+
+    def getWeights(self):
+        return self.weights
+
+    def getQValue(self, state, action):
+        """
+          Should return Q(state,action) = w * featureVector
+          where * is the dotProduct operator
+        """
+
+        features = self.featExtractor.getFeatures(state,action)
+        QValue = 0.0
+
+        for feature in features:
+            QValue += self.weights[feature] * features[feature]
+
+        return QValue
+
+    def update(self, state, action, nextState, reward):
+        """
+           Should update your weights based on transition
+        """
+        QValue = 0
+        difference = reward + (self.discount * self.getValue(nextState) - self.getQValue(state, action))
+        features = self.featExtractor.getFeatures(state, action)
+
+        for feature in features:
+          self.weights[feature] += self.alpha * features[feature] * difference
+
+
+    def final(self, state):
+        "Called at the end of each game."
+        # call the super-class final method
+        PacmanQAgent.final(self, state)
+
+        # did we finish training?
+        if Agent.episodeSoFar == self.numTraining:
+            # you might want to print your weights here for debugging
+            print(self.weights)
+            pass
