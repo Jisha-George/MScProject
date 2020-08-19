@@ -529,7 +529,7 @@ class Game:
         self.muteAgents = muteAgents
         self.catchExceptions = catchExceptions
         self.moveHistory = []
-        self.totalAgentTimes = [0 for agent in agents]
+        self.totalAgentTimes = [0.7 for agent in agents]
         self.totalAgentTimeWarnings = [0 for agent in agents]
         self.agentTimeout = False
         import cStringIO
@@ -618,18 +618,10 @@ class Game:
         numAgents = len( self.agents )
 
         while not self.gameOver:
-
-#            keypress = keys_press()
- #          
-  #          if keypress != []:
-   #            self.keypress = keypress
-#
- #           if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):
-  #             print('SPACE PRESS!')
-   #            
-    #           if (self.ENTER_KEY in self.keypress or 'Return' in self.keypress):
-     #              print('enter')
-
+        
+            
+            
+            
             # Fetch the next agent
             agent = self.agents[agentIndex]
             move_time = 0

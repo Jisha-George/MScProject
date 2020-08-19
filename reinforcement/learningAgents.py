@@ -217,6 +217,7 @@ class ReinforcementAgent(ValueEstimationAgent):
         self.startEpisode()
         if self.episodesSoFar == 0:
             print 'Beginning %d episodes of Training' % (self.numTraining)
+            
 
     def final(self, state):
         """
@@ -224,7 +225,8 @@ class ReinforcementAgent(ValueEstimationAgent):
         """
         deltaReward = state.getScore() - self.lastState.getScore()
         self.observeTransition(self.lastState, self.lastAction, state, deltaReward)
-        Directions.CD = False
+        if Directions.CD == True:
+            Directions.CD = False
         self.stopEpisode()
 
         # Make sure we have this var
