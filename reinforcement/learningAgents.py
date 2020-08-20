@@ -145,6 +145,7 @@ class ReinforcementAgent(ValueEstimationAgent):
         """
           Called by environment when episode is done
         """
+        Directions.CD = False
         if self.episodesSoFar < self.numTraining:
             self.accumTrainRewards += self.episodeRewards
         else:
@@ -226,10 +227,6 @@ class ReinforcementAgent(ValueEstimationAgent):
         """
         deltaReward = state.getScore() - self.lastState.getScore()
         self.observeTransition(self.lastState, self.lastAction, state, deltaReward)
-        #if Directions.CD == True:
-        Directions.CD = False
-        print(self.episodesSoFar)
-        print(self.numTraining)
         self.stopEpisode()
 
         # Make sure we have this var

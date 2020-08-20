@@ -15,8 +15,10 @@
 from game import *
 from learningAgents import ReinforcementAgent
 from featureExtractors import * 
-from game import Agent, Directions
-from graphicsUtils import keys_waiting, keys_pressed
+from game import Agent
+from game import Directions
+from graphicsUtils import keys_waiting
+from graphicsUtils import keys_pressed
 
 import random,util,math,time
 
@@ -112,13 +114,12 @@ class CDAgent(ReinforcementAgent):
         if keypress != []:
             self.keypress = keypress
 
-        if Agent.episodeSoFar < self.numTraining:
+        if self.episodesSoFar < self.numTraining:
             if (self.SPACE_KEY in self.keypress or 'space' in self.keypress):          
                 Directions.CD = True
         else:
         	print("Corrective Demontration Locked!")
         	
-            
         if Directions.CD == True:
             action = self.CDStart(state)  
         elif Directions.CD == False:
@@ -185,7 +186,7 @@ class CDAgent(ReinforcementAgent):
         newQValue = (1 - self.alpha) * self.getQValue(state, action) #new Qvalue
         newQValue += self.alpha * (reward + (self.discount * self.getValue(nextState)))
         self.QValues[state, action] = newQValue  
-        print(Agent.episodeSoFar)
+        print(self.episodesSoFar)
         print(state)
         print(nextState)
         print(action)
@@ -228,8 +229,7 @@ class PacmanCDAgent(CDAgent):
         #time.sleep(0.15)
         return action
 
-
-class ApproximateQAgent(PacmanCDAgent):
+class ApproximateQAgent(CDAgent):
     """
        ApproximateQLearningAgent
 
@@ -277,7 +277,7 @@ class ApproximateQAgent(PacmanCDAgent):
         PacmanQAgent.final(self, state)
 
         # did we finish training?
-        if Agent.episodeSoFar == self.numTraining:
+        if self.episodesSoFar == self.numTraining:
             # you might want to print your weights here for debugging
             print(self.weights)
             pass
