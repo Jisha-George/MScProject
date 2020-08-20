@@ -1,0 +1,544 @@
+python pacman.py -p PacmanQAgent -n 510 -l smallGrid -a numTraining=500 -k 1 -c --timeout=1 -r
+Beginning 500 episodes of Training
+Pacman died! Score: -514
+Pacman died! Score: -513
+Pacman died! Score: -518
+Pacman died! Score: -506
+Pacman died! Score: -507
+Pacman died! Score: -515
+Pacman died! Score: -514
+Pacman died! Score: -506
+Pacman died! Score: -510
+Pacman died! Score: -515
+Pacman died! Score: -511
+Pacman died! Score: -518
+Pacman died! Score: -505
+Pacman died! Score: -510
+Pacman died! Score: -517
+Pacman died! Score: -506
+Pacman died! Score: -519
+Pacman died! Score: -507
+Pacman died! Score: -508
+Pacman died! Score: -510
+Pacman died! Score: -505
+Pacman died! Score: -509
+Pacman died! Score: -511
+Pacman died! Score: -518
+Pacman died! Score: -507
+Pacman died! Score: -518
+Pacman died! Score: -510
+Pacman died! Score: -507
+Pacman died! Score: -506
+Pacman died! Score: -514
+Pacman died! Score: -506
+Pacman died! Score: -512
+Pacman died! Score: -509
+Pacman died! Score: -508
+Pacman died! Score: -509
+Pacman died! Score: -507
+Pacman died! Score: -519
+Pacman died! Score: -508
+Pacman died! Score: -508
+Pacman died! Score: -507
+Pacman died! Score: -509
+Pacman died! Score: -510
+Pacman died! Score: -513
+Pacman died! Score: -509
+Pacman died! Score: -504
+Pacman died! Score: -507
+Pacman died! Score: -512
+Pacman died! Score: -509
+Pacman died! Score: -510
+Pacman died! Score: -511
+Pacman died! Score: -509
+Pacman died! Score: -515
+Pacman died! Score: -508
+Pacman died! Score: -513
+Pacman died! Score: -514
+Pacman died! Score: -505
+Pacman died! Score: -513
+Pacman died! Score: -511
+Pacman died! Score: -504
+Pacman died! Score: -514
+Pacman died! Score: -515
+Pacman died! Score: -512
+Pacman died! Score: -518
+Pacman died! Score: -506
+Pacman died! Score: -509
+Pacman died! Score: -506
+Pacman died! Score: -509
+Pacman died! Score: -517
+Pacman died! Score: -504
+Pacman died! Score: -507
+Pacman died! Score: -519
+Pacman died! Score: -505
+Pacman died! Score: -509
+Pacman died! Score: -509
+Pacman died! Score: -513
+Pacman died! Score: -509
+Pacman died! Score: -517
+Pacman died! Score: -512
+Pacman died! Score: -520
+Pacman died! Score: -519
+Pacman died! Score: -519
+Pacman died! Score: -508
+Pacman died! Score: -511
+Pacman died! Score: -512
+Pacman died! Score: -508
+Pacman died! Score: -510
+Pacman died! Score: -507
+Pacman died! Score: -512
+Pacman died! Score: -508
+Pacman died! Score: -517
+Pacman died! Score: -505
+Pacman died! Score: -504
+Pacman died! Score: -515
+Pacman died! Score: -516
+Pacman died! Score: -508
+Pacman died! Score: -515
+Pacman died! Score: -511
+Pacman died! Score: -520
+Pacman died! Score: -517
+Pacman died! Score: -509
+Reinforcement Learning Status:
+	Completed 100 out of 500 training episodes
+	Average Rewards over all training: -510.94
+	Average Rewards for last 100 episodes: -510.94
+	Episode took 339.54 seconds
+Pacman died! Score: -520
+Pacman died! Score: -536
+Pacman died! Score: -504
+Pacman died! Score: -508
+Pacman died! Score: -516
+Pacman died! Score: -513
+Pacman died! Score: -509
+Pacman died! Score: -513
+Pacman died! Score: -509
+Pacman died! Score: -519
+Pacman died! Score: -514
+Pacman died! Score: -510
+Pacman died! Score: -513
+Pacman died! Score: -516
+Pacman died! Score: -504
+Pacman died! Score: -504
+Pacman died! Score: -510
+Pacman died! Score: -516
+Pacman died! Score: -513
+Pacman died! Score: -513
+Pacman died! Score: -510
+Pacman died! Score: -508
+Pacman died! Score: -510
+Pacman died! Score: -513
+Pacman died! Score: -510
+Pacman died! Score: -507
+Pacman died! Score: -516
+Pacman died! Score: -519
+Pacman died! Score: -504
+Pacman died! Score: -513
+Pacman died! Score: -516
+Pacman died! Score: -514
+Pacman died! Score: -509
+Pacman died! Score: -509
+Pacman died! Score: -514
+Pacman died! Score: -518
+Pacman died! Score: -505
+Pacman died! Score: -511
+Pacman died! Score: -520
+Pacman died! Score: -524
+Pacman died! Score: -508
+Pacman died! Score: -515
+Pacman died! Score: -512
+Pacman died! Score: -508
+Pacman died! Score: -520
+Pacman died! Score: -511
+Pacman died! Score: -515
+Pacman died! Score: -510
+Pacman died! Score: -512
+Pacman died! Score: -506
+Pacman died! Score: -509
+Pacman died! Score: -517
+Pacman died! Score: -520
+Pacman died! Score: -516
+Pacman died! Score: -510
+Pacman died! Score: -509
+Pacman died! Score: -511
+Pacman died! Score: -508
+Pacman died! Score: -511
+Pacman died! Score: -507
+Pacman died! Score: -503
+Pacman died! Score: -504
+Pacman died! Score: -521
+Pacman died! Score: -535
+Pacman died! Score: -506
+Pacman died! Score: -516
+Pacman died! Score: -508
+Pacman died! Score: -512
+Pacman died! Score: -504
+Pacman died! Score: -517
+Pacman died! Score: -516
+Pacman died! Score: -511
+Pacman died! Score: -521
+Pacman died! Score: -516
+Pacman died! Score: -516
+Pacman died! Score: -512
+Pacman died! Score: -520
+Pacman died! Score: -519
+Pacman died! Score: -520
+Pacman died! Score: -505
+Pacman died! Score: -516
+Pacman died! Score: -512
+Pacman died! Score: -511
+Pacman died! Score: -504
+Pacman died! Score: -508
+Pacman died! Score: -504
+Pacman died! Score: -506
+Pacman died! Score: -506
+Pacman died! Score: -504
+Pacman died! Score: -507
+Pacman died! Score: -507
+Pacman died! Score: -512
+Pacman died! Score: -506
+Pacman died! Score: -511
+Pacman died! Score: -512
+Pacman died! Score: -507
+Pacman died! Score: -504
+Pacman died! Score: -511
+Pacman died! Score: -509
+Pacman died! Score: -516
+Reinforcement Learning Status:
+	Completed 200 out of 500 training episodes
+	Average Rewards over all training: -511.47
+	Average Rewards for last 100 episodes: -512.00
+	Episode took 389.56 seconds
+Pacman died! Score: -518
+Pacman died! Score: -508
+Pacman died! Score: -521
+Pacman died! Score: -508
+Pacman died! Score: -508
+Pacman died! Score: -510
+Pacman died! Score: -506
+Pacman died! Score: -512
+Pacman died! Score: -509
+Pacman died! Score: -508
+Pacman died! Score: -512
+Pacman died! Score: -517
+Pacman died! Score: -509
+Pacman died! Score: -510
+Pacman died! Score: -517
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -509
+Pacman died! Score: -509
+Pacman died! Score: -515
+Pacman died! Score: -510
+Pacman died! Score: -512
+Pacman died! Score: -517
+Pacman died! Score: -509
+Pacman died! Score: -512
+Pacman died! Score: -509
+Pacman died! Score: -509
+Pacman died! Score: -510
+Pacman died! Score: -511
+Pacman died! Score: -510
+Pacman died! Score: -512
+Pacman died! Score: -516
+Pacman died! Score: -510
+Pacman died! Score: -513
+Pacman died! Score: -511
+Pacman died! Score: -523
+Pacman died! Score: -507
+Pacman died! Score: -510
+Pacman died! Score: -510
+Pacman died! Score: -510
+Pacman died! Score: -511
+Pacman died! Score: -512
+Pacman died! Score: -519
+Pacman died! Score: -513
+Pacman died! Score: -517
+Pacman died! Score: -506
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -511
+Pacman died! Score: -513
+Pacman died! Score: -507
+Pacman died! Score: -504
+Pacman died! Score: -505
+Pacman died! Score: -510
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -511
+Pacman died! Score: -510
+Pacman died! Score: -511
+Pacman died! Score: -510
+Pacman died! Score: -511
+Pacman died! Score: -522
+Pacman died! Score: -515
+Pacman died! Score: -521
+Pacman died! Score: -518
+Pacman died! Score: -512
+Pacman died! Score: -509
+Pacman died! Score: -540
+Pacman died! Score: -517
+Pacman died! Score: -512
+Pacman died! Score: -513
+Pacman died! Score: -520
+Pacman died! Score: -510
+Pacman died! Score: -513
+Pacman died! Score: -514
+Pacman died! Score: -514
+Pacman died! Score: -504
+Pacman died! Score: -514
+Pacman died! Score: -508
+Pacman died! Score: -519
+Pacman died! Score: -517
+Pacman died! Score: -510
+Pacman died! Score: -539
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -507
+Pacman died! Score: -515
+Pacman died! Score: -507
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -508
+Pacman died! Score: -522
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -508
+Pacman died! Score: -509
+Pacman died! Score: -520
+Pacman died! Score: -506
+Pacman died! Score: -515
+Pacman died! Score: -513
+Pacman died! Score: -520
+Pacman died! Score: -505
+Pacman died! Score: -513
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -512
+Pacman died! Score: -515
+Reinforcement Learning Status:
+	Completed 300 out of 500 training episodes
+	Average Rewards over all training: -488.25
+	Average Rewards for last 100 episodes: -441.81
+	Episode took 429.59 seconds
+Pacman died! Score: -515
+Pacman died! Score: -516
+Pacman died! Score: -512
+Pacman died! Score: -509
+Pacman died! Score: -519
+Pacman died! Score: -513
+Pacman died! Score: -511
+Pacman died! Score: -516
+Pacman died! Score: -508
+Pacman died! Score: -507
+Pacman died! Score: -517
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -511
+Pacman died! Score: -514
+Pacman died! Score: -517
+Pacman died! Score: -505
+Pacman died! Score: -510
+Pacman died! Score: -508
+Pacman died! Score: -503
+Pacman died! Score: -513
+Pacman died! Score: -517
+Pacman died! Score: -516
+Pacman died! Score: -511
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -505
+Pacman died! Score: -512
+Pacman died! Score: -508
+Pacman died! Score: -523
+Pacman died! Score: -507
+Pacman died! Score: -516
+Pacman died! Score: -514
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -503
+Pacman died! Score: -504
+Pacman emerges victorious! Score: 495
+Pacman died! Score: -508
+Pacman died! Score: -508
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -504
+Pacman died! Score: -511
+Pacman died! Score: -516
+Pacman died! Score: -523
+Pacman died! Score: -513
+Pacman died! Score: -507
+Pacman died! Score: -508
+Pacman died! Score: -518
+Pacman died! Score: -524
+Pacman died! Score: -522
+Pacman died! Score: -521
+Pacman emerges victorious! Score: 499
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -517
+Pacman died! Score: -518
+Pacman died! Score: -515
+Pacman died! Score: -514
+Pacman died! Score: -528
+Pacman died! Score: -509
+Pacman died! Score: -513
+Pacman died! Score: -504
+Pacman died! Score: -513
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -515
+Pacman died! Score: -504
+Pacman died! Score: -511
+Pacman died! Score: -536
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -532
+Pacman died! Score: -524
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -513
+Pacman died! Score: -524
+Pacman died! Score: -515
+Pacman died! Score: -517
+Pacman died! Score: -540
+Pacman emerges victorious! Score: 499
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -521
+Pacman died! Score: -505
+Pacman died! Score: -519
+Pacman died! Score: -503
+Pacman died! Score: -511
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -505
+Pacman died! Score: -515
+Pacman died! Score: -503
+Pacman died! Score: -508
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -507
+Pacman died! Score: -509
+Pacman died! Score: -511
+Pacman died! Score: -514
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -532
+Pacman died! Score: -510
+Pacman died! Score: -519
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -510
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -518
+Pacman died! Score: -503
+Reinforcement Learning Status:
+	Completed 400 out of 500 training episodes
+	Average Rewards over all training: -451.58
+	Average Rewards for last 100 episodes: -341.57
+	Episode took 451.86 seconds
+Pacman died! Score: -512
+Pacman emerges victorious! Score: 499
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -520
+Pacman died! Score: -527
+Pacman died! Score: -518
+Pacman died! Score: -506
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -512
+Pacman died! Score: -506
+Pacman died! Score: -505
+Pacman died! Score: -515
+Pacman died! Score: -502
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -508
+Pacman died! Score: -531
+Pacman died! Score: -528
+Pacman died! Score: -501
+Pacman died! Score: -506
+Pacman died! Score: -514
+Pacman died! Score: -508
+Pacman died! Score: -503
+Pacman died! Score: -512
+Pacman died! Score: -515
+Pacman died! Score: -509
+Pacman died! Score: -502
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -502
+Pacman died! Score: -528
+Pacman died! Score: -507
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -508
+Pacman died! Score: -516
+Pacman died! Score: -524
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -505
+Pacman died! Score: -517
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -519
+Pacman died! Score: -515
+Pacman died! Score: -505
+Pacman died! Score: -504
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -505
+Pacman died! Score: -504
+Pacman died! Score: -503
+Pacman died! Score: -516
+Pacman died! Score: -506
+Pacman died! Score: -504
+Pacman died! Score: -501
+Pacman died! Score: -504
+Pacman died! Score: -518
+Pacman died! Score: -502
+Pacman died! Score: -508
+Pacman died! Score: -516
+Pacman died! Score: -503
+Pacman died! Score: -515
+Pacman died! Score: -503
+Pacman died! Score: -514
+Pacman died! Score: -506
+Pacman died! Score: -503
+Pacman died! Score: -502
+Pacman emerges victorious! Score: 495
+Pacman died! Score: -502
+Pacman died! Score: -502
+Pacman died! Score: -501
+Pacman died! Score: -504
+Pacman died! Score: -516
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -513
+Pacman emerges victorious! Score: 499
+Pacman emerges victorious! Score: 491
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -508
+Pacman died! Score: -504
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -505
+Pacman died! Score: -568
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -505
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -505
+Pacman died! Score: -504
+Pacman died! Score: -513
+Pacman died! Score: -528
+Pacman died! Score: -507
+Pacman died! Score: -511
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -509
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -505
+Pacman died! Score: -518
+Pacman died! Score: -511
+Pacman died! Score: -504
+Pacman died! Score: -536
+Pacman died! Score: -504
+Pacman died! Score: -509
+Pacman died! Score: -502
+Pacman emerges victorious! Score: 491
+Pacman emerges victorious! Score: 491
+Reinforcement Learning Status:
+	Completed 500 out of 500 training episodes
+	Average Rewards over all training: -421.16
+	Average Rewards for last 100 episodes: -299.50
+	Episode took 458.96 seconds
+Training Done (turning off epsilon and alpha)
+---------------------------------------------
+Pacman died! Score: -516
+Pacman emerges victorious! Score: 499
+Pacman emerges victorious! Score: 491
+Pacman died! Score: -513
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -507
+Pacman died! Score: -508
+Pacman emerges victorious! Score: 499
+Pacman died! Score: -516
+Pacman died! Score: -516
+Average Score: -415.039215686
+Scores:        -514.0, -513.0, -518.0, -506.0, -507.0, -515.0, -514.0, -506.0, -510.0, -515.0, -511.0, -518.0, -505.0, -510.0, -517.0, -506.0, -519.0, -507.0, -508.0, -510.0, -505.0, -509.0, -511.0, -518.0, -507.0, -518.0, -510.0, -507.0, -506.0, -514.0, -506.0, -512.0, -509.0, -508.0, -509.0, -507.0, -519.0, -508.0, -508.0, -507.0, -509.0, -510.0, -513.0, -509.0, -504.0, -507.0, -512.0, -509.0, -510.0, -511.0, -509.0, -515.0, -508.0, -513.0, -514.0, -505.0, -513.0, -511.0, -504.0, -514.0, -515.0, -512.0, -518.0, -506.0, -509.0, -506.0, -509.0, -517.0, -504.0, -507.0, -519.0, -505.0, -509.0, -509.0, -513.0, -509.0, -517.0, -512.0, -520.0, -519.0, -519.0, -508.0, -511.0, -512.0, -508.0, -510.0, -507.0, -512.0, -508.0, -517.0, -505.0, -504.0, -515.0, -516.0, -508.0, -515.0, -511.0, -520.0, -517.0, -509.0, -520.0, -536.0, -504.0, -508.0, -516.0, -513.0, -509.0, -513.0, -509.0, -519.0, -514.0, -510.0, -513.0, -516.0, -504.0, -504.0, -510.0, -516.0, -513.0, -513.0, -510.0, -508.0, -510.0, -513.0, -510.0, -507.0, -516.0, -519.0, -504.0, -513.0, -516.0, -514.0, -509.0, -509.0, -514.0, -518.0, -505.0, -511.0, -520.0, -524.0, -508.0, -515.0, -512.0, -508.0, -520.0, -511.0, -515.0, -510.0, -512.0, -506.0, -509.0, -517.0, -520.0, -516.0, -510.0, -509.0, -511.0, -508.0, -511.0, -507.0, -503.0, -504.0, -521.0, -535.0, -506.0, -516.0, -508.0, -512.0, -504.0, -517.0, -516.0, -511.0, -521.0, -516.0, -516.0, -512.0, -520.0, -519.0, -520.0, -505.0, -516.0, -512.0, -511.0, -504.0, -508.0, -504.0, -506.0, -506.0, -504.0, -507.0, -507.0, -512.0, -506.0, -511.0, -512.0, -507.0, -504.0, -511.0, -509.0, -516.0, -518.0, -508.0, -521.0, -508.0, -508.0, -510.0, -506.0, -512.0, -509.0, -508.0, -512.0, -517.0, -509.0, -510.0, -517.0, 499.0, -509.0, -509.0, -515.0, -510.0, -512.0, -517.0, -509.0, -512.0, -509.0, -509.0, -510.0, -511.0, -510.0, -512.0, -516.0, -510.0, -513.0, -511.0, -523.0, -507.0, -510.0, -510.0, -510.0, -511.0, -512.0, -519.0, -513.0, -517.0, -506.0, 499.0, -511.0, -513.0, -507.0, -504.0, -505.0, -510.0, 499.0, -511.0, -510.0, -511.0, -510.0, -511.0, -522.0, -515.0, -521.0, -518.0, -512.0, -509.0, -540.0, -517.0, -512.0, -513.0, -520.0, -510.0, -513.0, -514.0, -514.0, -504.0, -514.0, -508.0, -519.0, -517.0, -510.0, -539.0, 499.0, -507.0, -515.0, -507.0, 499.0, -508.0, -522.0, 499.0, -508.0, -509.0, -520.0, -506.0, -515.0, -513.0, -520.0, -505.0, -513.0, 499.0, -512.0, -515.0, -515.0, -516.0, -512.0, -509.0, -519.0, -513.0, -511.0, -516.0, -508.0, -507.0, -517.0, 499.0, -511.0, -514.0, -517.0, -505.0, -510.0, -508.0, -503.0, -513.0, -517.0, -516.0, -511.0, 499.0, -505.0, -512.0, -508.0, -523.0, -507.0, -516.0, -514.0, 499.0, -503.0, -504.0, 495.0, -508.0, -508.0, 499.0, -504.0, -511.0, -516.0, -523.0, -513.0, -507.0, -508.0, -518.0, -524.0, -522.0, -521.0, 499.0, 499.0, -517.0, -518.0, -515.0, -514.0, -528.0, -509.0, -513.0, -504.0, -513.0, 499.0, -515.0, -504.0, -511.0, -536.0, 499.0, -532.0, -524.0, 499.0, -513.0, -524.0, -515.0, -517.0, -540.0, 499.0, 499.0, -521.0, -505.0, -519.0, -503.0, -511.0, 499.0, -505.0, -515.0, -503.0, -508.0, 499.0, -507.0, -509.0, -511.0, -514.0, 499.0, -532.0, -510.0, -519.0, 491.0, -510.0, 499.0, -518.0, -503.0, -512.0, 499.0, 499.0, -520.0, -527.0, -518.0, -506.0, 491.0, -512.0, -506.0, -505.0, -515.0, -502.0, 491.0, -508.0, -531.0, -528.0, -501.0, -506.0, -514.0, -508.0, -503.0, -512.0, -515.0, -509.0, -502.0, 491.0, -502.0, -528.0, -507.0, 491.0, -508.0, -516.0, -524.0, 491.0, -505.0, -517.0, 491.0, -519.0, -515.0, -505.0, -504.0, 491.0, -505.0, -504.0, -503.0, -516.0, -506.0, -504.0, -501.0, -504.0, -518.0, -502.0, -508.0, -516.0, -503.0, -515.0, -503.0, -514.0, -506.0, -503.0, -502.0, 495.0, -502.0, -502.0, -501.0, -504.0, -516.0, 499.0, -513.0, 499.0, 491.0, 499.0, -508.0, -504.0, 499.0, -505.0, -568.0, 499.0, -505.0, 499.0, -505.0, -504.0, -513.0, -528.0, -507.0, -511.0, 499.0, -509.0, 491.0, -505.0, -518.0, -511.0, -504.0, -536.0, -504.0, -509.0, -502.0, 491.0, 491.0, -516.0, 499.0, 491.0, -513.0, 499.0, -507.0, -508.0, 499.0, -516.0, -516.0
+Win Rate:      49/510 (0.10)
+Record:        Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Win, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Win, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Win, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Win, Win, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Win, Loss, Win, Loss, Loss, Loss, Win, Win, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Win, Loss, Loss, Loss, Win, Loss, Loss, Win, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Loss, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Win, Loss, Loss, Win, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Win, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Loss, Win, Win, Loss, Win, Win, Loss, Win, Loss, Loss, Win, Loss, Loss
+

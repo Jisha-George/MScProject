@@ -227,11 +227,7 @@ class ReinforcementAgent(ValueEstimationAgent):
         """
         deltaReward = state.getScore() - self.lastState.getScore()
         self.observeTransition(self.lastState, self.lastAction, state, deltaReward)
-<<<<<<< HEAD
-=======
-        #if Directions.CD == True:
         Directions.CD = False
->>>>>>> 072fdc0c945965845897715e28194f73cc069ae9
         self.stopEpisode()
 
         # Make sure we have this var
