@@ -537,6 +537,7 @@ class Game:
 
     def getProgress(self):
         if self.gameOver:
+            Directions.CD = False
             return 1.0
         else:
             return self.rules.getProgress(self)
